@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Hasil Diagnosa</title>
+	<title>Hasil Perhitungan</title>
     <link href="{{ public_path('dist/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -22,7 +22,7 @@
 	<table class="table table-hover border">
 		<thead class="thead-light">
 			<tr>
-				<th>Gejala yang kamu alami saat ini</th>
+				<th>Kebiasaan yang anak alami saat ini</th>
 				<th>Tingkat keyakinan</th>
 				<th>CF User</th>
 			</tr>
@@ -41,7 +41,7 @@
 	@foreach(unserialize($riwayat->hasil_diagnosa) as $diagnosa)
 	<div class="card card-body shadow-none p-0 mt-5 border">
 		<div class="card-header bg-primary text-white p-2">
-			<h6 class="font-weight-bold">Tabel perhitungan penyakit: {{ $diagnosa['nama_penyakit'] }} ({{ $diagnosa['kode_penyakit'] }})</h6>
+			<h6 class="font-weight-bold">Tabel perhitungan Gaya Belajar: {{ $diagnosa['nama_penyakit'] }} ({{ $diagnosa['kode_penyakit'] }})</h6>
 		</div>
 		<table class="table table-hover">
 			<thead class="thead-light">
@@ -74,7 +74,7 @@
 	<div class="mt-5">
 		<div class="alert alert-success">
 			<h5 class="font-weight-bold">Kesimpulan</h5>
-			<p>Berdasarkan dari gejala yang kamu pilih atau alami juga berdasarkan Role/Basis aturan yang sudah ditentukan oleh seorang pakar penyakit maka perhitungan Algoritma Certainty Factor mengambil nilai CF yang paling pinggi yakni <b>{{ number_format(unserialize($riwayat->cf_max)[0], 3) }} ({{ number_format(unserialize($riwayat->cf_max)[0], 3) * 100 }}%)</b> yaitu <b>{{ unserialize($riwayat->cf_max)[1] }}</b></p>
+			<p>Berdasarkan dari kebiasaan yang kamu pilih atau alami juga berdasarkan Role/Basis aturan yang sudah ditentukan oleh seorang pakar / guru maka perhitungan Algoritma Certainty Factor mengambil nilai CF yang paling tinggi yakni <b>{{ number_format(unserialize($riwayat->cf_max)[0], 3) }} ({{ number_format(unserialize($riwayat->cf_max)[0], 3) * 100 }}%)</b> yaitu <b>{{ unserialize($riwayat->cf_max)[1] }}</b></p>
 		</div>
 	</div>
 </body>

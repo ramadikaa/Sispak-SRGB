@@ -18,7 +18,7 @@
 						<thead class="thead-light">
 							<tr>
 								<th style="width: 10%;">No.</th>
-								<th style="width: 60%;">Gejala</th>
+								<th style="width: 60%;">Kebiasaan</th>
 								<th style="width: 20%;">Nilai</th>
 								<th style="width: 10%;"></th>
 							</tr>

@@ -1,5 +1,5 @@
 <x-app-layout>
-	<x-slot name="title">Daftar Gejala</x-slot>
+	<x-slot name="title">Daftar Kebiasaan</x-slot>
 	<x-alert-error></x-alert-error>
 	@if(session()->has('success'))
 	<x-alert type="success" message="{{ session()->get('success') }}" />
@@ -7,13 +7,13 @@
 	<x-card>
 		<x-slot name="option">
 			<div class="btn btn-success add">
-				<i class="fas fa-plus mr-1"></i> Tambahkan Gejala
+				<i class="fas fa-plus mr-1"></i> Tambahkan Kebiasaan
 			</div>
 		</x-slot>
 		<table class="table table-hover border">
 			<thead>
 				<th>Kode</th>
-				<th>Nama Gejala</th>
+				<th>Nama Kebiasaan</th>
 				<th></th>
 			</thead>
 			<tbody>
@@ -45,19 +45,19 @@
 		</div>
 	</x-card>
 
-	<x-modal title="Tambahkan Gejala" id="gejala">
+	<x-modal title="Tambahkan Kebiasaan" id="gejala">
 		<form action="{{ route('admin.gejala.store') }}" method="POST">
 			@csrf
 			<div class="row">
 				<div class="col-md-4">
 					<div class="form-group">
-						<label for="nama">Kode Gejala</label>
+						<label for="nama">Kode Kebiasaan</label>
 						<input type="text" class="form-control" name="kode">
 					</div>
 				</div>
 				<div class="col-md-8">
 					<div class="form-group">
-						<label for="nama">Nama Gejala</label>
+						<label for="nama">Nama Kebiasaan</label>
 						<input type="text" class="form-control" name="nama">
 					</div>
 				</div>
@@ -75,13 +75,13 @@
 			<div class="row">
 				<div class="col-md-4">
 					<div class="form-group">
-						<label for="nama">Kode Gejala</label>
+						<label for="nama">Kode Kebiasaan</label>
 						<input type="text" class="form-control" name="kode">
 					</div>
 				</div>
 				<div class="col-md-8">
 					<div class="form-group">
-						<label for="nama">Nama Gejala</label>
+						<label for="nama">Nama Kebiasaan</label>
 						<input type="text" class="form-control" name="nama">
 					</div>
 				</div>
@@ -102,7 +102,7 @@
 			$('.delete').click(function(e) {
 				e.preventDefault()
 				Swal.fire({
-				  title: 'Hapus data gejala?',
+				  title: 'Hapus data Kebiasaan?',
 				  text: "Kamu tidak akan bisa mengembalikannya kembali!",
 				  icon: 'warning',
 				  showCancelButton: true,

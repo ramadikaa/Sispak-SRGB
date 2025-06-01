@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="title">
-        Gaya Belajar Anak
+        Rekomendasi Gaya Belajar Anak
     </x-slot>
 
     <x-slot name="head">
@@ -47,10 +47,16 @@
                                     <span class="ml-2">{{ $value->nama }}</span>
                                 </div>
                                 <div>
-                                    <select name="diagnosa[]" id="" class="form-control form-control-sm red-border">
-                                        <option value="{{ $value->id }}+-1">Tidak</option>
-                                        <option value="" selected>Tidak tahu</option>
-                                        <option value="{{ $value->id }}+1">Pasti</option>
+                                    <select name="diagnosa[]" class="form-control form-control-sm red-border">
+                                        <option value="{{ $value->id }}+-1">Sangat Tidak Yakin</option>
+                                        <option value="{{ $value->id }}+-0.75">Tidak Yakin</option>
+                                        <option value="{{ $value->id }}+-0.5">Cenderung Tidak Yakin</option>
+                                        <option value="{{ $value->id }}+-0.25">Sedikit Tidak Yakin</option>
+                                        <option value="{{ $value->id }}+0" selected>Tidak Tahu / Netral</option>
+                                        <option value="{{ $value->id }}+0.25">Sedikit Yakin</option>
+                                        <option value="{{ $value->id }}+0.5">Cenderung Yakin</option>
+                                        <option value="{{ $value->id }}+0.75">Yakin</option>
+                                        <option value="{{ $value->id }}+1">Sangat Yakin</option>
                                     </select>
                                 </div>
                             </div>

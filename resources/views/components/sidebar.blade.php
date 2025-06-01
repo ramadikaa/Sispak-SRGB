@@ -49,7 +49,7 @@
 
     @can('penyakit-list')
     <x-nav-link 
-        text="Daftar Penyakit" 
+        text="Daftar Gaya Belajar" 
         icon="th-list" 
         url="{{ route('admin.penyakit') }}"
         active="{{ request()->routeIs('admin.penyakit') ? ' active' : '' }}"
@@ -58,7 +58,7 @@
 
     @can('gejala-list')
     <x-nav-link 
-        text="Daftar Gejala" 
+        text="Daftar Kebiasaan" 
         icon="th-list" 
         url="{{ route('admin.gejala') }}"
         active="{{ request()->routeIs('admin.gejala') ? ' active' : '' }}"

@@ -1,5 +1,5 @@
 <x-app-layout>
-	<x-slot name="title">Daftar Penyakit</x-slot>
+	<x-slot name="title">Daftar Kebiasaan</x-slot>
 	<x-alert-error></x-alert-error>
 	@if(session()->has('success'))
 	<x-alert type="success" message="{{ session()->get('success') }}" />
@@ -7,14 +7,14 @@
 	<x-card>
 		<x-slot name="option">
 			<div class="btn btn-success add">
-				<i class="fas fa-plus mr-1"></i> Tambahkan Penyakit
+				<i class="fas fa-plus mr-1"></i> Tambahkan Kebiasaan
 			</div>
 		</x-slot>
 		<table class="table table-hover border">
 			<thead>
 				<th>Kode</th>
-				<th>Nama penyakit</th>
-				<th>Penyebab</th>
+				<th>Nama Kebiasaan</th>
+				<th>Rekomendasi</th>
 				<th></th>
 			</thead>
 			<tbody>
@@ -44,19 +44,19 @@
 		</table>
 	</x-card>
 
-	<x-modal title="Tambahkan penyakit" id="penyakit">
+	<x-modal title="Tambahkan Gaya Belajar" id="penyakit">
 		<form action="{{ route('admin.penyakit.store') }}" method="POST">
 			@csrf
 			<div class="row">
 				<div class="col-md-4">
 					<div class="form-group">
-						<label for="nama">Kode penyakit</label>
+						<label for="nama">Kode Gaya Belajar</label>
 						<input type="text" class="form-control" name="kode">
 					</div>
 				</div>
 				<div class="col-md-8">
 					<div class="form-group">
-						<label for="nama">Nama penyakit</label>
+						<label for="nama">Nama Gaya Belajar</label>
 						<input type="text" class="form-control" name="nama">
 					</div>
 				</div>
@@ -64,7 +64,7 @@
 			<div class="row mt-2">
 				<div class="col-md-12">
 					<div class="form-group">
-						<label for="penyebab">Keterangan penyebab</label>
+						<label for="penyebab">Keterangan Rekomendasi</label>
 						<textarea name="penyebab" cols="30" rows="6" class="form-control"></textarea>
 					</div>
 				</div>
@@ -82,13 +82,13 @@
 			<div class="row">
 				<div class="col-md-4">
 					<div class="form-group">
-						<label for="nama">Kode penyakit</label>
+						<label for="nama">Kode Gaya Belajar</label>
 						<input type="text" class="form-control" name="kode">
 					</div>
 				</div>
 				<div class="col-md-8">
 					<div class="form-group">
-						<label for="nama">Nama penyakit</label>
+						<label for="nama">Nama Gaya Belajar</label>
 						<input type="text" class="form-control" name="nama">
 					</div>
 				</div>
@@ -96,7 +96,7 @@
 			<div class="row mt-2">
 				<div class="col-md-12">
 					<div class="form-group">
-						<label for="penyebab">Keterangan penyebab</label>
+						<label for="penyebab">Keterangan Rekomendasi</label>
 						<textarea name="penyebab" cols="30" rows="6" class="form-control"></textarea>
 					</div>
 				</div>
@@ -117,7 +117,7 @@
 			$('.delete').click(function(e) {
 				e.preventDefault()
 				Swal.fire({
-				  title: 'Hapus data penyakit?',
+				  title: 'Hapus data Gaya Belajar?',
 				  text: "Kamu tidak akan bisa mengembalikannya kembali!",
 				  icon: 'warning',
 				  showCancelButton: true,

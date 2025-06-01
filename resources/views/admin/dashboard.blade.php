@@ -11,19 +11,19 @@
             color="success"
         />
         <x-card-sum 
-            text="Total Diagnosa" 
+            text="Total Tes" 
             value="{{ App\Models\Riwayat::count() }}" 
             icon="stethoscope" 
             color="primary"
         />
         <x-card-sum 
-            text="Daftar Penyakit" 
+            text="Daftar Gaya Belajar" 
             value="{{ App\Models\Penyakit::count() }}" 
             icon="th-list" 
             color="warning"
         />
         <x-card-sum 
-            text="Daftar Gejala" 
+            text="Daftar Kebiasaan" 
             value="{{ App\Models\Gejala::count() }}" 
             icon="th-list" 
             color="danger"
